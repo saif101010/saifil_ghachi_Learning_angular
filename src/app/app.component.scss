@@ -1,0 +1,40 @@
+#sentinel-proof {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+
+  div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+  }
+
+  div:hover {
+    transform: scale(1.03);
+    background-color: #eef;
+  }
+
+  h2 {
+    color: darkblue;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 4px 0;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  #sentinel-proof {
+    grid-template-columns: 1fr;
+  }
+
+  #sentinel-proof div {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
