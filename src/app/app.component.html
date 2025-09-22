@@ -1,0 +1,14 @@
+<div id="sentinel-proof">
+  <div *ngFor="let movie of movies; let i = index">
+    <h2>{{ movie.title }} ({{ i + 1 }})</h2>
+    <p>Director: {{ movie.director }}</p>
+    <p *ngIf="movie.releaseYear">Released: {{ movie.releaseYear }}</p>
+    <p>Genre: {{ movie.details.genre }}</p>
+    <p>Format: {{ movie.details.format }}</p>
+
+    <!-- ng-template example -->
+    <ng-template [ngIf]="!movie.releaseYear">
+      <p>No release year available.</p>
+    </ng-template>
+  </div>
+</div>
